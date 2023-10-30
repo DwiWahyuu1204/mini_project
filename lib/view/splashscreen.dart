@@ -29,8 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
         body: Container(
             decoration: const BoxDecoration(
       image: DecorationImage(
-        image: AssetImage(
-            'assets/images/splashscreen.jpg'), // Ganti dengan path gambar yang sesuai
+        image: AssetImage('assets/images/splashscreen.jpg'),
         fit: BoxFit.cover,
       ),
     )));
