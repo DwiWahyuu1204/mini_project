@@ -60,7 +60,7 @@ class TodoLokalProvider with ChangeNotifier {
     );
 
     if (maps.isEmpty) {
-      return null; // Tidak ada data dengan judul yang diberikan
+      return null;
     }
 
     return TodoLokal(
@@ -71,11 +71,11 @@ class TodoLokalProvider with ChangeNotifier {
     );
   }
 
-  Future<void> deleteTodoByIdLokal(String title) async {
+  Future<void> deleteTodoByIdLokal(String id) async {
     await _database!.delete(
       tableName,
-      where: 'title = ?',
-      whereArgs: [title],
+      where: 'id = ?',
+      whereArgs: [id],
     );
     notifyListeners();
   }

@@ -21,7 +21,7 @@ class _DetailTodoScreenState extends State<DetailTodoScreen> {
     var todoProvider = Provider.of<TodoProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detail Screen'),
+        title: const Text('Detail Tugas'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -32,7 +32,6 @@ class _DetailTodoScreenState extends State<DetailTodoScreen> {
               child: Card(
                   elevation: 10,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
@@ -40,19 +39,35 @@ class _DetailTodoScreenState extends State<DetailTodoScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              '${widget.todoLokal.title}',
-                              style: MyFonstStyle().fontHeader,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      widget.todoLokal.title,
+                                      style: MyFonstStyle().fontHeader,
+                                    ),
+                                    Text(
+                                      'Deadline Tugas: ${DateFormat('dd-MM-yyyy').format(todoProvider.deadline)}',
+                                      style: MyFonstStyle().fontHeader,
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
-                            Text(
-                              'Deadline Tugas: ${DateFormat('dd-MM-yyyy').format(todoProvider.deadline)}',
-                              style: MyFonstStyle().fontHeader,
-                            ),
-                            SizedBox(
+                            const SizedBox(
                               height: 3,
                             ),
+                            const Divider(),
                             Text(
-                              '${widget.todoLokal.description}',
+                              'Deskripsi Tugas',
+                              style: MyFonstStyle().fontDeskripsi,
+                            ),
+                            const Divider(),
+                            Text(
+                              widget.todoLokal.description,
                               style: MyFonstStyle().fontDeskripsi,
                             ),
                           ],

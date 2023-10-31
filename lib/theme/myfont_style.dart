@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class MyFonstStyle {
   TextStyle fontHeader = GoogleFonts.roboto(
     fontSize: 20,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.bold,
   );
 
   TextStyle fontAppbar = GoogleFonts.roboto(

@@ -25,7 +25,7 @@ class _AddTodoState extends State<AddTodo> {
         Provider.of<TodoLokalProvider>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Todo'),
+        title: const Text('Add Tugas'),
       ),
       body: Column(
         children: [

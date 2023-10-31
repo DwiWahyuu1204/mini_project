@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/theme/myfont_style.dart';
 import 'package:provider/provider.dart';
 
 import '../models/todo-models/todo.dart';
@@ -34,32 +35,52 @@ class _EditTodoScreenState extends State<EditTodoScreen> {
   @override
   Widget build(BuildContext context) {
     var todoProvider = Provider.of<TodoProvider>(context);
-    void initState() {
-      super.initState();
-      // Set nilai awal pada TextEditingController saat initState
-      todoProvider.newtitleController.text = widget.todo.title;
-      todoProvider.newdeskripsiController.text = widget.todo.description;
-    }
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Edit Todo'),
+        title: const Text('Edit Tugas'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            TextField(
-              controller: todoProvider.newtitleController,
-              decoration: const InputDecoration(border: OutlineInputBorder()),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Judul Tugas',
+                  style: MyFonstStyle().fontDeskripsi,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                TextField(
+                  controller: todoProvider.newtitleController,
+                  decoration:
+                      const InputDecoration(border: OutlineInputBorder()),
+                ),
+              ],
             ),
             const SizedBox(
               height: 7,
             ),
-            TextField(
-                controller: todoProvider.newdeskripsiController,
-                decoration:
-                    const InputDecoration(border: OutlineInputBorder())),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Deskripsi Tugas',
+                  style: MyFonstStyle().fontDeskripsi,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                TextField(
+                    maxLines: 5,
+                    controller: todoProvider.newdeskripsiController,
+                    decoration:
+                        const InputDecoration(border: OutlineInputBorder())),
+              ],
+            ),
             const SizedBox(
               height: 7,
             ),
@@ -86,7 +107,7 @@ class _EditTodoScreenState extends State<EditTodoScreen> {
                   );
                 }
               },
-              child: Text("Edit"),
+              child: const Text("Edit Tugas"),
             )
           ],
         ),
