@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/view-models/todos_provider.dart';
-import 'package:mini_project/view/Screen_todo.dart';
+import 'package:mini_project/view/screen_todo.dart';
 import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {

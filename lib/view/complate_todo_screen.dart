@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/theme/myfont_style.dart';
 import 'package:mini_project/view/add_todo_screen.dart';
 
 import 'package:provider/provider.dart';
@@ -13,7 +14,10 @@ class ComplateTodoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Complete Task'),
+        title: Text(
+          'Complete Task',
+          style: MyFonstStyle().fontAppbar,
+        ),
         centerTitle: true,
       ),
       body: Consumer<TodoProvider>(

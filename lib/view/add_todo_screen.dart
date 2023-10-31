@@ -25,7 +25,7 @@ class _AddTodoState extends State<AddTodo> {
         Provider.of<TodoLokalProvider>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Tugas'),
+        title: const Text('Add Tugas', key: Key('keyaddtugas')),
       ),
       body: Column(
         children: [
@@ -92,7 +92,7 @@ class _AddTodoState extends State<AddTodo> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text('Deadline Yang Dipilih '),
+                  const Text('Deadline Yang Dipilih'),
                   Text(DateFormat('dd-MM-yyyy').format(todoProvider.deadline)),
                 ],
               ),

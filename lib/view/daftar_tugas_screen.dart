@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/theme/myfont_style.dart';
 import 'package:mini_project/view/add_todo_screen.dart';
-
 import 'package:provider/provider.dart';
-
 import '../models/todo-models/todo.dart';
-
 import '../view-models/todos_provider.dart';
-
 import 'detail_todo_screen.dart';
 import 'edit_todo_screen.dart';
 
