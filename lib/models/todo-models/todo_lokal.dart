@@ -16,8 +16,7 @@ class TodoLokal {
       id: json['id'],
       title: json['title'],
       description: json['description'],
-      deadline:
-          DateTime.parse(json['deadline']), // Mengonversi string ke DateTime
+      deadline: DateTime.parse(json['deadline']),
     );
   }
   Map<String, dynamic> toMap() {
@@ -25,8 +24,7 @@ class TodoLokal {
       'id': id,
       'title': title,
       'description': description,
-      'deadline':
-          deadline.toString(), // Mengonversi DateTime ke string ISO 8601
+      'deadline': deadline.toString(),
     };
   }
 }

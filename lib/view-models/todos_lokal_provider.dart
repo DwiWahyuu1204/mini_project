@@ -46,7 +46,6 @@ class TodoLokalProvider with ChangeNotifier {
     await db.insert(
       tableName,
       todoLokal.toMap(),
-      conflictAlgorithm: ConflictAlgorithm.replace,
     );
     notifyListeners();
   }

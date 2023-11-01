@@ -19,6 +19,7 @@ class TodoProvider extends ChangeNotifier {
   final TextEditingController _newdeskripsiController = TextEditingController();
   TextEditingController get newdeskripsiController => _newdeskripsiController;
   bool isCompleted = false;
+
   void setDeadline(DateTime newDate) {
     _deadline = newDate;
     notifyListeners();
